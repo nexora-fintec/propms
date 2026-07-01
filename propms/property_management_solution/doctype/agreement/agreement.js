@@ -101,7 +101,7 @@ frappe.ui.form.on("Agreement", {
       frm.refresh_field("attachments");
     }
     if (!frm.is_new() && frm.doc.status === "Active") {
-      frm.add_custom_button("Generate Next Billing", () => {
+      frm.add_custom_button(__("Generate Next Billing"), () => {
         frappe.call({
           method:
             "propms.property_management_solution.doctype.agreement.agreement.generate_next_billing_manual",
@@ -111,14 +111,14 @@ frappe.ui.form.on("Agreement", {
               let { status, message } = resp.message;
               if (status === "success") {
                 frappe.msgprint({
-                  title: "Success",
+                  title: __("Success"),
                   indicator: "green",
                   message: message,
                 });
                 frm.reload_doc();
               } else {
                 frappe.msgprint({
-                  title: "Error",
+                  title: __("Error"),
                   indicator: "red",
                   message: message,
                 });
@@ -127,6 +127,27 @@ frappe.ui.form.on("Agreement", {
           },
         });
       });
+
+      frm.add_custom_button(__("Create PDC for Cheque Billings"), () => {
+        frappe.call({
+          method: "propms.api.pdc.create_pdcs_for_agreement",
+          args: { agreement: frm.doc.name },
+          freeze: true,
+          callback(r) {
+            if (!r.exc && r.message) {
+              const created = r.message.created || [];
+              frappe.msgprint({
+                title: __("PDC"),
+                indicator: created.length ? "green" : "blue",
+                message: created.length
+                  ? __("Created PDC(s): {0}", [created.join(", ")])
+                  : r.message.message || __("No pending cheque billings need PDC."),
+              });
+              frm.reload_doc();
+            }
+          },
+        });
+      }, __("PDC"));
     }
   },
   validate(frm) {

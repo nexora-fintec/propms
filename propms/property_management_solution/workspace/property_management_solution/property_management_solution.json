@@ -1,10 +1,14 @@
 {
  "charts": [],
- "content": "[{\"id\":\"pms-nc1\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Total Properties\",\"col\":4}},{\"id\":\"pms-nc2\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Total Rooms\",\"col\":4}},{\"id\":\"pms-c1\",\"type\":\"card\",\"data\":{\"card_name\":\"Property\",\"col\":4}},{\"id\":\"pms-c2\",\"type\":\"card\",\"data\":{\"card_name\":\"Room\",\"col\":4}}]",
+ "content": "[{\"id\":\"pms-hdr\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Property Management Solution</b></span>\",\"col\":12}},{\"id\":\"pms-sc1\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Property\",\"col\":3}},{\"id\":\"pms-sc2\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Agreement\",\"col\":3}},{\"id\":\"pms-sc3\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Post Dated Cheque\",\"col\":3}},{\"id\":\"pms-sp\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"pms-c1\",\"type\":\"card\",\"data\":{\"card_name\":\"Property Setup\",\"col\":4}},{\"id\":\"pms-c2\",\"type\":\"card\",\"data\":{\"card_name\":\"Leasing & Billing\",\"col\":4}},{\"id\":\"pms-c3\",\"type\":\"card\",\"data\":{\"card_name\":\"Operations\",\"col\":4}},{\"id\":\"pms-c4\",\"type\":\"card\",\"data\":{\"card_name\":\"Reports\",\"col\":4}}]",
+ "creation": "2026-07-01 23:46:08.505869",
  "custom_blocks": [],
+ "docstatus": 0,
  "doctype": "Workspace",
  "for_user": "",
+ "hide_custom": 0,
  "icon": "home",
+ "idx": 0,
  "indicator_color": "blue",
  "is_hidden": 0,
  "label": "Property Management Solution",
@@ -12,8 +16,9 @@
   {
    "hidden": 0,
    "is_query_report": 0,
-   "label": "Property",
-   "link_count": 4,
+   "label": "Property Setup",
+   "link_count": 5,
+   "link_type": "DocType",
    "onboard": 0,
    "type": "Card Break"
   },
@@ -21,6 +26,7 @@
    "hidden": 0,
    "is_query_report": 0,
    "label": "Property",
+   "link_count": 0,
    "link_to": "Property",
    "link_type": "DocType",
    "onboard": 1,
@@ -29,7 +35,18 @@
   {
    "hidden": 0,
    "is_query_report": 0,
+   "label": "Room",
+   "link_count": 0,
+   "link_to": "Room",
+   "link_type": "DocType",
+   "onboard": 1,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
    "label": "Furniture Master",
+   "link_count": 0,
    "link_to": "Furniture Master",
    "link_type": "DocType",
    "onboard": 0,
@@ -39,6 +56,7 @@
    "hidden": 0,
    "is_query_report": 0,
    "label": "Feature Master",
+   "link_count": 0,
    "link_to": "Feature Master",
    "link_type": "DocType",
    "onboard": 0,
@@ -48,6 +66,7 @@
    "hidden": 0,
    "is_query_report": 0,
    "label": "Feature Category Master",
+   "link_count": 0,
    "link_to": "Feature Category Master",
    "link_type": "DocType",
    "onboard": 0,
@@ -56,38 +75,184 @@
   {
    "hidden": 0,
    "is_query_report": 0,
-   "label": "Room",
-   "link_count": 1,
+   "label": "Leasing & Billing",
+   "link_count": 5,
+   "link_type": "DocType",
    "onboard": 0,
    "type": "Card Break"
   },
   {
    "hidden": 0,
    "is_query_report": 0,
-   "label": "Room",
-   "link_to": "Room",
+   "label": "Agreement",
+   "link_count": 0,
+   "link_to": "Agreement",
    "link_type": "DocType",
    "onboard": 1,
    "type": "Link"
-  }
- ],
- "module": "Property Management Solution",
- "name": "Property Management Solution",
- "number_cards": [
-  {
-   "label": "Total Properties",
-   "number_card_name": "Total Properties"
   },
   {
-   "label": "Total Rooms",
-   "number_card_name": "Total Rooms"
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Lease",
+   "link_count": 0,
+   "link_to": "Lease",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Agreement Billing Entry",
+   "link_count": 0,
+   "link_to": "Agreement Billing Entry",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Post Dated Cheque",
+   "link_count": 0,
+   "link_to": "Post Dated Cheque",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Property Management Settings",
+   "link_count": 0,
+   "link_to": "Property Management Settings",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Operations",
+   "link_count": 3,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Issue",
+   "link_count": 0,
+   "link_to": "Issue",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Daily Checklist",
+   "link_count": 0,
+   "link_to": "Daily Checklist",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Meter Reading",
+   "link_count": 0,
+   "link_to": "Meter Reading",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Reports",
+   "link_count": 4,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Debtors Report",
+   "link_count": 0,
+   "link_to": "Debtors Report",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Security Deposit",
+   "link_count": 0,
+   "link_to": "Security Deposit",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Rent Invoices Details",
+   "link_count": 0,
+   "link_to": "Rent Invoices Details",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "PDC Due Report",
+   "link_count": 0,
+   "link_to": "PDC Due Report",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
   }
  ],
+ "modified": "2026-07-02 00:02:40.532747",
+ "modified_by": "Administrator",
+ "module": "Property Management Solution",
+ "name": "Property Management Solution",
+ "number_cards": [],
+ "owner": "Administrator",
  "public": 1,
  "quick_lists": [],
  "restrict_to_domain": "",
  "roles": [],
  "sequence_id": 1.0,
- "shortcuts": [],
+ "shortcuts": [
+  {
+   "color": "Blue",
+   "doc_view": "List",
+   "label": "Property",
+   "link_to": "Property",
+   "type": "DocType"
+  },
+  {
+   "color": "Green",
+   "doc_view": "List",
+   "label": "Agreement",
+   "link_to": "Agreement",
+   "type": "DocType"
+  },
+  {
+   "color": "Orange",
+   "doc_view": "List",
+   "label": "Post Dated Cheque",
+   "link_to": "Post Dated Cheque",
+   "type": "DocType"
+  }
+ ],
  "title": "Property Management Solution"
 }

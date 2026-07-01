@@ -452,11 +452,11 @@
  ],
  "is_submittable": 1,
  "links": [],
- "modified": "2026-01-19 18:55:20.187107",
+ "modified": "2026-07-02 00:18:40.390366",
  "modified_by": "Administrator",
  "module": "Property Management Solution",
  "name": "Agreement",
- "naming_rule": "Expression",
+ "naming_rule": "Expression (old style)",
  "owner": "Administrator",
  "permissions": [
   {
@@ -480,6 +480,30 @@
    "read": 1,
    "report": 1,
    "role": "Property Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Accounts Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Accounts User",
    "share": 1,
    "write": 1
   }

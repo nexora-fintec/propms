@@ -16,7 +16,7 @@ app_license = "MIT"
 
 # include js, css files in header of desk.html
 # app_include_css = "/assets/propms/css/propms.css"
-# app_include_js = "/assets/propms/js/propms.js"
+app_include_js = "/assets/propms/js/workspace_fix.js"
 
 # include js, css files in header of web template
 # web_include_css = "/assets/propms/css/propms.css"
@@ -36,6 +36,9 @@ doctype_js = {
     "Journal Entry Account": "property_management_solution/journal_entry_account.js",
     "Issue": "property_management_solution/issue.js",
     "Company": "property_management_solution/company.js",
+    "Post Dated Cheque": "pdc/doctype/post_dated_cheque/post_dated_cheque.js",
+    "Agreement Billing Entry": "property_management_solution/doctype/agreement_billing_entry/agreement_billing_entry.js",
+    "Agreement": "property_management_solution/doctype/agreement/agreement.js",
 }
 
 # doctype_list_js = {"doctype" : "public/js/doctype_list.js"}
@@ -207,9 +210,15 @@ scheduler_events = {
         "propms.property_management_solution.agreement.billing_scheduler",
         "propms.auto_custom.statusChangeBeforeLeaseExpire",
         "propms.auto_custom.statusChangeAfterLeaseExpire",
+        "propms.api.pdc.present_due_pdcs",
     ],
     "cron": {"00 12 * * *": ["propms.lease_invoice.leaseInvoiceAutoCreate"]},
 }
+
+after_migrate = [
+	"propms.workspace_sync.sync_propms_workspaces",
+	"propms.workspace_permissions.ensure_workspace_permissions",
+]
 
 
 # doc_events = {

@@ -56,7 +56,8 @@
   "knowledgebase",
   "lft",
   "rgt",
-  "old_parent"
+  "old_parent",
+  "parent_property"
  ],
  "fields": [
   {
@@ -356,7 +357,7 @@
  "icon": "octicon octicon-home",
  "is_tree": 1,
  "links": [],
- "modified": "2026-01-19 19:00:26.418718",
+ "modified": "2026-07-02 00:18:39.239970",
  "modified_by": "Administrator",
  "module": "Property Management Solution",
  "name": "Property",
@@ -436,6 +437,30 @@
    "read": 1,
    "report": 1,
    "role": "Property Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Accounts Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Accounts User",
    "share": 1,
    "write": 1
   }

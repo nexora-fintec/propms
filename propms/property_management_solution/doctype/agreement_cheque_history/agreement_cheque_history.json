@@ -57,7 +57,7 @@
    "fieldtype": "Select",
    "in_list_view": 1,
    "label": "Status",
-   "options": "\nDeposited\nCleared\nBounced"
+   "options": "\nHeld\nDeposited\nCleared\nBounced"
   },
   {
    "allow_on_submit": 1,

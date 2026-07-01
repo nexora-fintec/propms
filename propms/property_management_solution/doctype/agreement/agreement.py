@@ -4,6 +4,7 @@
 
 from __future__ import unicode_literals
 import frappe
+from frappe import _
 from frappe.model.document import Document
 from frappe.utils import add_days, today, getdate, add_months, get_datetime, now
 from frappe.utils import add_days, get_first_day, get_last_day, add_months, today
@@ -320,6 +321,14 @@ class Agreement(Document):
                 f"Invalid Mode of Payment '{schedule_row.mode_of_payment}'."
             )
 
+        mode_lower = (schedule_row.mode_of_payment or "").strip().lower()
+        if mode_lower == "cheque":
+            if not schedule_row.cheque_no or not schedule_row.cheque_date:
+                frappe.throw(
+                    _("Cheque No and Cheque Date are required on Payment Schedule row "
+                      "({0} - {1}).").format(schedule_row.period_start, schedule_row.period_end)
+                )
+
         billing_entry = frappe.get_doc({
             "doctype": "Agreement Billing Entry",
             "agreement": self.name,
@@ -349,6 +358,17 @@ class Agreement(Document):
             "status": "Billed"
         }
     )
+
+        pdc_name = None
+        if mode_lower == "cheque":
+            from propms.api.pdc import auto_create_pdc_for_billing
+            pdc_name = auto_create_pdc_for_billing(billing_entry.name)
+
+        if pdc_name:
+            return (
+                f"Billing Entry {billing_entry.name} created with PDC {pdc_name} "
+                f"(held until {schedule_row.cheque_date})."
+            )
         return (
             f"Billing Entry {billing_entry.name} created "
             f"for period {schedule_row.period_start} to {schedule_row.period_end}."

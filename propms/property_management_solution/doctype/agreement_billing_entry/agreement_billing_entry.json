@@ -20,7 +20,8 @@
   "cheque_date",
   "cheque_row_id",
   "sales_invoice",
-  "payment_entry"
+  "payment_entry",
+  "post_dated_cheque"
  ],
  "fields": [
   {
@@ -105,15 +106,22 @@
    "label": "Cheque Row ID"
   },
   {
+   "fieldname": "sales_invoice",
+   "fieldtype": "Data",
+   "label": "Sales Invoice"
+  },
+  {
    "fieldname": "payment_entry",
    "fieldtype": "Data",
    "hidden": 1,
    "label": "Payment Entry"
   },
   {
-   "fieldname": "sales_invoice",
-   "fieldtype": "Data",
-   "label": "Sales Invoice"
+   "fieldname": "post_dated_cheque",
+   "fieldtype": "Link",
+   "label": "Post Dated Cheque",
+   "options": "Post Dated Cheque",
+   "read_only": 1
   }
  ],
  "grid_page_length": 50,
@@ -135,6 +143,40 @@
    "read": 1,
    "report": 1,
    "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Property Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Accounts Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Accounts User",
    "share": 1,
    "write": 1
   }

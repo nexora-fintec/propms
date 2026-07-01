@@ -1,0 +1,125 @@
+{
+ "charts": [],
+ "content": "[{\"id\":\"pdc-hdr\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Post Dated Cheques (PDC)</b></span>\",\"col\":12}},{\"id\":\"pdc-sc1\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Post Dated Cheque\",\"col\":4}},{\"id\":\"pdc-sc2\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"PDC Due Report\",\"col\":4}},{\"id\":\"pdc-sp\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"pdc-c1\",\"type\":\"card\",\"data\":{\"card_name\":\"Post Dated Cheques\",\"col\":4}},{\"id\":\"pdc-c2\",\"type\":\"card\",\"data\":{\"card_name\":\"Reports\",\"col\":4}},{\"id\":\"pdc-c3\",\"type\":\"card\",\"data\":{\"card_name\":\"Accounting\",\"col\":4}}]",
+ "creation": "2026-07-01 23:46:08.613374",
+ "custom_blocks": [],
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "for_user": "",
+ "hide_custom": 0,
+ "icon": "credit-card",
+ "idx": 0,
+ "indicator_color": "green",
+ "is_hidden": 0,
+ "label": "PDC",
+ "links": [
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Post Dated Cheques",
+   "link_count": 2,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Post Dated Cheque",
+   "link_count": 0,
+   "link_to": "Post Dated Cheque",
+   "link_type": "DocType",
+   "onboard": 1,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Agreement",
+   "link_count": 0,
+   "link_to": "Agreement",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Reports",
+   "link_count": 1,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "PDC Due Report",
+   "link_count": 0,
+   "link_to": "PDC Due Report",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Accounting",
+   "link_count": 2,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Payment Entry",
+   "link_count": 0,
+   "link_to": "Payment Entry",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Sales Invoice",
+   "link_count": 0,
+   "link_to": "Sales Invoice",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  }
+ ],
+ "modified": "2026-07-02 00:02:42.246733",
+ "modified_by": "Administrator",
+ "module": "PDC",
+ "name": "PDC",
+ "number_cards": [],
+ "owner": "Administrator",
+ "public": 1,
+ "quick_lists": [],
+ "restrict_to_domain": "",
+ "roles": [],
+ "sequence_id": 2.0,
+ "shortcuts": [
+  {
+   "color": "Green",
+   "doc_view": "List",
+   "format": "{} Held",
+   "label": "Post Dated Cheque",
+   "link_to": "Post Dated Cheque",
+   "stats_filter": "[[\"Post Dated Cheque\",\"status\",\"=\",\"Held\",false]]",
+   "type": "DocType"
+  },
+  {
+   "color": "Orange",
+   "doc_view": "",
+   "label": "PDC Due Report",
+   "link_to": "PDC Due Report",
+   "report_ref_doctype": "Post Dated Cheque",
+   "type": "Report"
+  }
+ ],
+ "title": "PDC"
+}
